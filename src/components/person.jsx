@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom"
 import { useEffect, useState } from 'react'
 import api from "../api/api"
 import Navbar from './navbar'
-import '../app.css'
+import '../App.css'
 import './person.css'
 
 
