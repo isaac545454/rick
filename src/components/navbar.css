@@ -38,4 +38,7 @@
     .navbar h1{
         margin-bottom: 18px;
     }
+    .navbar input{
+      margin-right: 5px;
+    }
 }
