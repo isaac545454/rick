@@ -1,7 +1,7 @@
 import Api from '../api/api'
 import { useState, useEffect } from 'react'
 import {Link } from "react-router-dom"
-import '../app.css'
+import '../App.css'
 
 const card = ()=>{
     const [personagens, setpersonagens] = useState([])
