@@ -19,7 +19,7 @@ const search = ()=>{
     }
 
     useEffect(()=>{
-        const link = `https://rickandmortyapi.com/api/character/?${query}=rick&status=alive`
+        const link = `https://rickandmortyapi.com/api/character/?page=1&name=${query}`       
         info(link)
         
     }, [query])
