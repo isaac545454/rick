@@ -1,8 +1,8 @@
 *{
   margin: 0;
-  padding: 0;
+  padding: 0; 
   box-sizing: border-box;
-  max-width: 1300px;
+  max-width: 1500px;
 
 
 }
@@ -47,6 +47,20 @@
 .card img{
   width: 80%;
   border-radius: 50%;
+}
+
+.containerButton{
+  background-color: transparent;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10%;
+}
+.containerButton button{
+  background-color: transparent;
+  background-color: rgb(24, 204, 8);
+  padding: 10px;
+  
 }
 
 @media (max-width: 450px){

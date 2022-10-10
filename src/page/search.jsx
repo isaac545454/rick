@@ -1,22 +1,14 @@
-import Navbar from './navbar'
-import {useEffect, useState} from 'react'
-import {useSearchParams, Link} from 'react-router-dom'
-import api from '../api/api'
 
+import {useEffect, useState} from 'react'
+import {useSearchParams, Link, useNavigate} from 'react-router-dom'
+import api from '../api/api'
+import {  toast } from 'react-toastify';
 
 const search = ()=>{
     const [searchParams ] = useSearchParams()
     const  query = searchParams.get("q")
     const [personagens, setPersonagens] = useState([])
-
-    const info = async (url)=>{
-        const URL =await fetch(url)
-        const data = await URL.json()
-        if(URL){
-        setPersonagens(data.results)
-        console.log(data);
-        }
-    }
+    const navigate = useNavigate()
 
     useEffect(()=>{
         const link = `https://rickandmortyapi.com/api/character/?page=1&name=${query}`       
@@ -24,9 +16,27 @@ const search = ()=>{
         
     }, [query])
 
+    const info = async (url)=>{
+        const URL = await fetch(url)
+        const data = await URL.json()
+        if(data.error){
+            navigate("/")
+            toast.warn("personagem não encontrado")
+            return
+    
+        }
+       
+        setPersonagens(data.results)
+      
+    
+      
+    }
+
+  
+
 
     return(<div>
-        <Navbar />
+      
          
             <div className="container-card">
                 {personagens.length === 0 && <p>carregando</p>}

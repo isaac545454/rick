@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from 'react'
 import api from "../api/api"
-import Navbar from './navbar'
 import '../App.css'
 import './person.css'
 
@@ -25,8 +24,8 @@ const person = ()=>{
     })
     return(
           
-        <div >
-        <Navbar /> 
+        <div>
+       
         <div className="detalhes">
         {person != null && (<div className="card">
              <img src={person.image} />
