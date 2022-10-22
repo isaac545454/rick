@@ -9,6 +9,7 @@ const search = ()=>{
     const  query = searchParams.get("q")
     const [personagens, setPersonagens] = useState([])
     const navigate = useNavigate()
+    
 
     useEffect(()=>{
         const link = `https://rickandmortyapi.com/api/character/?page=1&name=${query}`       
