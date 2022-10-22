@@ -2,7 +2,7 @@
 <h1 style="text-align: center">projeto</h1>
 <img src="gif.gif">
  
-<h2>link <a href="https://rick-and.vercel.app/">https://rick-and.vercel.app/</a></h2>
+<p>link <a href="https://rick-and.vercel.app/">https://rick-and.vercel.app/</a></p>
 
 <h2 style="margin-top: 20px">Tecnologias</h2>
 <ul>
